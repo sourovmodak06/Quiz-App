@@ -4,10 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    
+    <main class="bg-[#207398]">
+        <section class="h-[100vh] flex flex-col justify-center items-center">
+            <button class="p-3 font-semibold text-2xl rounded-2xl bg-white text-[#207398] shadow-2xl drop-shadow-2xl delay-300 hover:shadow-inner hidden" id="start-quiz">Start Quiz</button>
+            <div class="hidden rounded-2xl p-5 bg-white" id="quiz-rules">
+                <h2 class="text-center text-2xl capitalize font-semibold">Some Rules of this Quiz 👨🏻‍🏫</h2>
+                <div class="border-2 rounded-2xl my-3"></div>
+                <div class="capitalize w-3/4 m-auto">
+                    <div class="text-xl">&#8544;. You will have only <span class="text-green-500">15 seconds</span> per each question ✅</div>
+                    <div class="text-xl">&#8545;. Once you select your answer,you can't reselect.✅</div>
+                    <div class="text-xl">&#8546;. You can't select any option once time goes off.✅</div>
+                    <div class="text-xl">&#8547;. You can't exit from the Quiz while you're playing.✅</div>
+                    <div class="text-xl">&#8548;. You'll get points on the basis of your correct answers.✅</div>
+                </div>
+                <div class="my-5 text-right">
+                    <button class="border-2 px-5 py-1 text-xl font-bold rounded-2xl shadow-xl hover:bg-[#207398] hover:text-white border-[#207398] delay-150" id="exit-quiz">Exit Quiz</button>
+                    <button class="border-2 ml-5 px-5 py-1 text-xl font-bold rounded-2xl shadow-xl hover:bg-[#207398] hover:text-white border-[#207398] delay-150" id="continue">Continue</button>
+                </div>
+            </div>
+            <div class="w-3/4 bg-white rounded-md hidden">
+                <div class="flex justify-between items-center px-10">
+                    <h2 class="text-2xl capitalize font-semibold">choose the correct answer</h2>
+                    <h2 class="font-semibold text-xl bg-[#76c5ec] p-2 my-3 rounded-md">Time Left <span class="bg-black text-white px-4 py-1 rounded-md">15</span></h2>
+                </div>
+                <div class="border-2 border-green-200 rounded-2xl mt-3 mb-7"></div>
+                <div class="px-10">
+                    <!-- Question section Start-->
+                    <div class="grid gap-4">
+                        <h2 class="text-2xl font-semibold">What does HTML stand for ?</h2>
+                        <div class="flex justify-between items-center bg-green-200 px-5 py-2 rounded-md">
+                            <h3>Hyper Text Preprocessor</h3>
+                            <div class="bg-green-600 h-6 w-6 rounded-full flex justify-center items-center">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center bg-green-200 px-5 py-2 rounded-md">
+                            <h3>Hyper Text Markup Language</h3>
+                            <div class="bg-red-600 h-6 w-6 rounded-full flex justify-center items-center">
+                                <i class="fa fa-times text-white"></i>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center bg-green-200 px-5 py-2 rounded-md">
+                            <h3>Hyper Text Multiple Language</h3>
+                        </div>
+                        <div class="flex justify-between items-center bg-green-200 px-5 py-2 rounded-md">
+                            <h3>Hyper Tool Multi Language</h3>
+                        </div>
+                    </div>
+                    <!-- Question section End-->
+                    <div class="flex justify-between items-center my-6">
+                        <h2 class="font-semibold uppercase"><span>2</span> of 5 Question</h2>
+                        <button class="border-2 ml-5 px-5 py-1 text-xl font-bold rounded-2xl shadow-xl hover:bg-[#207398] hover:text-white border-[#207398] delay-150">Next Quiz</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Result Box -->
+            <div class="bg-white p-10 flex flex-col justify-center items-center">
+                <h2 class="text-7xl mb-8">👑</h2>
+                <h2 class="font-bold text-xl">You've completed the Quiz !!!</h2>
+                <h3 class="font-bold text-xl"><span>and sorry, You got only</span> <span>2</span>out of 5</h3>
+                <div class="my-5 mt-10">
+                    <button class="border-2 px-5 py-1 text-xl shadow-xl hover:bg-[#207398] hover:text-white border-[#207398] delay-150" id="exit-quiz">Replay Quiz</button>
+                    <button class="border-2 ml-5 px-5 py-1 text-xl shadow-xl hover:bg-[#207398] hover:text-white border-[#207398] delay-150" id="continue">Quit Quiz</button>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="js/script.js"></script>
 </body>
 </html>
